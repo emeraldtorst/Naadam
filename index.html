@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Австри улс дахь Монголчуудын Нэгдсэн Наадам 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    <style>
+        .mongolian-font {
+            font-family: 'Noto Sans Mongolian', sans-serif;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('https://videos.openai.com/vg-assets/assets%2Ftask_01jt3cf3w7eyqs3s2q46d7b8t0%2F1746018041_img_1.webp?st=2025-04-30T11%3A52%3A39Z&se=2025-05-06T12%3A52%3A39Z&sks=b&skt=2025-04-30T11%3A52%3A39Z&ske=2025-05-06T12%3A52%3A39Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=nwacBAUcPLNE9uxuMMJSMlGTbUCtjYHbrbdBPpAzSUI%3D&az=oaivgprodscus&auto=format&fit=crop&w=2100&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        .pattern-bg {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23da2032" fill-opacity="0.1" d="M0 0h50v50H0z"/><path fill="%230066b3" fill-opacity="0.1" d="M50 50h50v50H50z"/></svg>');
+            background-size: 20px 20px;
+        }
+        .soyombo {
+            font-family: 'Noto Sans Mongolian', sans-serif;
+            font-size: 2rem;
+            color: #da2032;
+        }
+        .countdown-item {
+            transition: all 0.3s ease;
+        }
+        .countdown-item:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #da2032;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 pattern-bg">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="soyombo">ᠮᠤᠩᠭᠤᠯ</span>
+                <a href="#" class="ml-2 text-xl font-bold text-gray-800">Naadam 2025</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Нүүр</a>
+                <a href="#about" class="nav-link">Тухай</a>
+                <a href="#event" class="nav-link">Өдөрлөгийн талаар</a>
+                <a href="#contact" class="nav-link">Холбогдох</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center text-white pt-20">
+        <div class="container mx-auto px-6">
+            <h1 class="mongolian-font text-4xl md:text-6xl font-bold mb-4">Австри улс дахь Монголчуудын Нэгдсэн Наадам 2025</h1>
+            <p class="text-xl md:text-2xl mb-8">2025 оны 7-р сарын 5-нд Австрийн Вена хотод болох Монголын соёлын түүхэн баярт нэгдээрэй!</p>
+            
+            <!-- Countdown Timer -->
+            <div class="flex justify-center mb-12">
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="countdown-item bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div id="days" class="text-4xl font-bold">00</div>
+                        <div class="text-sm">Өдөр</div>
+                    </div>
+                    <div class="countdown-item bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div id="hours" class="text-4xl font-bold">00</div>
+                        <div class="text-sm">Цаг</div>
+                    </div>
+                    <div class="countdown-item bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div id="minutes" class="text-4xl font-bold">00</div>
+                        <div class="text-sm">Минут</div>
+                    </div>
+                    <div class="countdown-item bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                        <div id="seconds" class="text-4xl font-bold">00</div>
+                        <div class="text-sm">Секунд</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#event" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                Та бүхэн маань нэгдээрэй!
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jt3d2q2xeds86797tvnjvsg0%2F1746018676_img_0.webp?st=2025-04-30T11%3A53%3A48Z&se=2025-05-06T12%3A53%3A48Z&sks=b&skt=2025-04-30T11%3A53%3A48Z&ske=2025-05-06T12%3A53%3A48Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=nsTptPPacSqb3LS9gApsi74IBAQzcPnztWk6YdtExqQ%3D&az=oaivgprodscus" alt="Mongolian Culture" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">МОНГОЛ ӨВ СОЁЛЫН БАЯР
+</h2>
+                    <p class="text-lg mb-6">
+Наадам бол Монголын уламжлалт баяр бөгөөд барилдаан, морин уралдаан, сур харваа гэх “Эрийн гурван наадам”-ыг тэмдэглэдэг. Энэ нь Монголын соёл, нүүдлийн амьдралын хэв маягийг тод илэрхийлсэн өнгө төгөлдөр баяр юм.
+                    <p class="text-lg mb-8">Вена хотноо зохион байгуулагдах манай арга хэмжээ нь Австри дахь Монголчуудыг нэгтгэн, уламжлалт спорт, хөгжим, бүжиг, амтат зоогоор дамжуулан өв соёлоо тэмдэглэх зорилготой юм.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-red-100 p-4 rounded-lg text-center flex-1">
+                            <i class="fas fa-horse-head text-3xl text-red-600 mb-2"></i>
+                            <p class="font-semibold">Морин уралдаан</p>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg text-center flex-1">
+                            <i class="fas fa-bullseye text-3xl text-blue-600 mb-2"></i>
+                            <p class="font-semibold">Нум сум</p>
+                        </div>
+                        <div class="bg-yellow-100 p-4 rounded-lg text-center flex-1">
+                            <i class="fas fa-hand-rock text-3xl text-yellow-600 mb-2"></i>
+                            <p class="font-semibold">Бөх</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="event" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Өдөрлөгийн талаар</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                <div class="md:flex">
+                    <div class="p-8">
+                        <div class="uppercase tracking-wide text-sm text-red-600 font-semibold mb-1">Хэзээ болох</div>
+                        <h3 class="text-2xl font-bold mb-4">2025, 7-н сарын 5, Вена, Австрид</h3>
+                        <p class="text-gray-600 mb-6">
+                            "Бид Австри дахь Монголчуудын Нэгдсэн Наадам 2025 оны 7-р сарын 5-нд Вена хотноо зохион байгуулагдахаар болсныг баяртайгаар мэдэгдэж байна. Энэхүү түүхэн арга хэмжээг хамтдаа онцгой болгохын төлөө уран бүтээлчид, бизнес эрхлэгчид, хувь хүмүүсийг дэмжин оролцохыг урьж байна. Та бүхнийг энэхүү баярт нэгдэн, Монгол соёлоо хамтдаа өргөн тэмдэглэхийг уриалж байна."
+                        </p>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Арга хэмжээний Онцлох Үзүүлэнүүд
+
+</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-music text-red-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h5 class="font-semibold">Уламжлалт Хөгжим
+</h5>
+                                        <p class="text-sm text-gray-600">Морин хуурын уянгалаг аялгуугаар сэтгэлээ хөглөөрэй
+
+</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-utensils text-red-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h5 class="font-semibold">Монгол Хоол
+</h5>
+                                        <p class="text-sm text-gray-600">Бууз, хуушуур зэрэг уламжлалт амттанг амталж үзээрэй
+
+</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-tshirt text-red-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h5 class="font-semibold">Соёлын Үзэсгэлэн
+</h5>
+                                        <p class="text-sm text-gray-600">Монгол үндэсний хувцас, эдлэл хэрэгслийн үзэсгэлэнг сонирхоорой
+
+</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-child text-red-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h5 class="font-semibold">Хүүхдүүдэд Зориулсан Үйл Ажиллагаа
+</h5>
+                                        <p class="text-sm text-gray-600">Багачуудын оролцох тоглоом, сургалт, хөгжөөнт хөтөлбөрүүд
+
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Өдөрлөгийн хуваарь</h3>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="divide-y divide-gray-200">
+                        <div class="p-6 hover:bg-gray-50 transition duration-200">
+                            <div class="flex items-center">
+                                <div class="bg-red-100 text-red-800 rounded-full p-3 mr-4">
+                                    <i class="fas fa-sun text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Өглөөний үйл ажиллагаа</h4>
+                                    <p class="text-gray-600">9:00 AM - 10:30 AM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50 transition duration-200">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 text-blue-800 rounded-full p-3 mr-4">
+                                    <i class="fas fa-hand-rock text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Бөх</h4>
+                                    <p class="text-gray-600">11:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50 transition duration-200">
+                            <div class="flex items-center">
+                                <div class="bg-yellow-100 text-yellow-800 rounded-full p-3 mr-4">
+                                    <i class="fas fa-utensils text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Өдрийн хоолны цаг болон ёс заншлын үйл ажиллагаа</h4>
+                                    <p class="text-gray-600">1:00 PM - 2:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50 transition duration-200">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 text-green-800 rounded-full p-3 mr-4">
+                                    <i class="fas fa-bullseye text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Нум сум</h4>
+                                    <p class="text-gray-600">3:00 PM - 4:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50 transition duration-200">
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 text-purple-800 rounded-full p-3 mr-4">
+                                    <i class="fas fa-music text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Оройны үйл ажиллагаа </h4>
+                                    <p class="text-gray-600">5:00 PM - 7:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Хаана болох талаар</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">Вена, Австри
+</h3>
+                    <p class="text-lg mb-4">Хаана болох тухай нарийн мэдээллийг тун удахгүй зарлагдана.</p>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-calendar-alt text-red-600 mr-3"></i>
+                        <span>July 5, 2025</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-red-600 mr-3"></i>
+                        <span>9:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-200 h-64 md:h-96 rounded-lg overflow-hidden">
+                        <!-- Google Map Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.579676621142!2d16.37447731589291!3d48.2115639792297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079c5b9b7f7f%3A0x8f0b8e3c8f8e8b4b!2sSchwedenplatz%2C%201010%20Vienna%2C%20Austria!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Холбоо Барих
+</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold mb-6">Холбоо барих мэдээлэл</h3>
+                        <div class="mb-6">
+                            <div class="flex items-start mb-4">
+                                <i class="fas fa-envelope text-red-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">📧 Имэйл: erdenesukh.31@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-red-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Утас</h4>
+                                    <p class="text-gray-600">+43 670 606 1211</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4">Биднийг дагаарай</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-200">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-200">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition duration-200">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-gray-100 p-8">
+                        <h3 class="text-xl font-bold mb-6">Биднээс асуух зүйл</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Нэр</label>
+                                <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 p-2 border">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Эмайл</label>
+                                <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 p-2 border">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Мессеж</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 p-2 border"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-200">
+                                Явуулах
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-xl font-bold text-center mb-8">Манай Ивээн Тэтгэгчид ба Хамтран Зохион Байгуулагчид</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="bg-gray-200 w-32 h-20 rounded flex items-center justify-center">
+                    <span class="text-gray-500 font-semibold">Sponsor 1</span>
+                </div>
+                <div class="bg-gray-200 w-32 h-20 rounded flex items-center justify-center">
+                    <span class="text-gray-500 font-semibold">Sponsor 2</span>
+                </div>
+                <div class="bg-gray-200 w-32 h-20 rounded flex items-center justify-center">
+                    <span class="text-gray-500 font-semibold">Sponsor 3</span>
+                </div>
+                <div class="bg-gray-200 w-32 h-20 rounded flex items-center justify-center">
+                    <span class="text-gray-500 font-semibold">Sponsor 4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="soyombo">ᠮᠤᠩᠭᠤᠯ</span>
+                        <h3 class="ml-2 text-xl font-bold">Naadam 2025</h3>
+                    </div>
+                    <p class="mt-4 max-w-xs">Европын зүрхэнд Монгол соёлыг тэмдэглэе.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Хурдан холбоосууд</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-red-400 transition duration-200">Нүүр</a></li>
+                            <li><a href="#about" class="hover:text-red-400 transition duration-200">Тухай</a></li>
+                            <li><a href="#event" class="hover:text-red-400 transition duration-200">Өдөрлөгийн талаар</a></li>
+                            <li><a href="#contact" class="hover:text-red-400 transition duration-200">Холбох утас</a></li>
+                        </ul>
+                    </div>
+                
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Дагах</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-red-400 transition duration-200"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-red-400 transition duration-200"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-red-400 transition duration-200"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Австри улс дахь Монголчуудын Нэгдсэн Наадам. 
+</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('July 5, 2025 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form Validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Here you would typically send the form data to a server
+            alert('Одоогоор зөвхөн эмайл утсаар л асуух боломжтой байна.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle (would need additional implementation)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            // This would need a proper mobile menu implementation
+            alert('Mobile menu would open here');
+        });
+    </script>
+</body>
+</html>
